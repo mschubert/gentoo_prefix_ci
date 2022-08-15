@@ -10,7 +10,7 @@ env:
 
 jobs:
   bootstrap:
-    runs-on: ubuntu-22.04
+    runs-on: macos-latest
 
     steps:
       - name: Checkout code
@@ -19,8 +19,6 @@ jobs:
       - name: sysinfo
         run: |
           id
-          cat /proc/cpuinfo
-          cat /proc/meminfo
           df -h
 
       - name: download bootstrap script
@@ -52,7 +50,7 @@ jobs:
 
   emerge-system:
     needs: bootstrap
-    runs-on: ubuntu-22.04
+    runs-on: macos-latest
     permissions:
       contents: read
       packages: write
