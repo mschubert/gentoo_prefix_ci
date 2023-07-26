@@ -4,10 +4,9 @@ on:
 name: Gentoo Prefix CI (Actions VM)
 
 env:
-  EPREFIX: /tmp/gentoo
+  EPREFIX: /private/tmp/gentoo
   LATEST_TREE_YES: 1
   TESTING_PV: latest
-  I_KNOW_MY_GCC_WORKS_FINE_WITH_SYMLINKS: 'hell yeah'
 
 jobs:
   bootstrap:
