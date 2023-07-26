@@ -4,13 +4,13 @@ on:
 name: Gentoo Prefix CI (Actions VM)
 
 env:
-  EPREFIX: /private/tmp/gentoo
+  EPREFIX: /tmp/gentoo
   LATEST_TREE_YES: 1
   TESTING_PV: latest
 
 jobs:
   bootstrap:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout code
@@ -50,7 +50,7 @@ jobs:
 
   emerge-system:
     needs: bootstrap
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     permissions:
       contents: read
       packages: write
